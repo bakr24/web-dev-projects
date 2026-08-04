@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-chart-line"></i>
+          <h2>DashPro</h2>
+        </div>
+        <ul class="menu">
+          <li class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-chart-column"></i>
+            <span>Analytics</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-users"></i>
+            <span>Customers</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-box"></i>
+            <span>Products</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Orders</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <header>
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search..."/>
+          </div>
+          <div class="header-right">
+            <button id="themeBtn">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <i class="fa-regular fa-bell notification"></i>
+            <div class="profile">
+              <img src="https://i.pravatar.cc/150?img=32" alt="Admin" />
+              <div>
+                <h4>Abubakar</h4>
+                <p>Administrator</p>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="title">
+          <h1>Dashboard Overview</h1>
+          <p>Welcome back 👋 Here's what's happening today.</p>
+        </section>
+
+        <section class="cards">
+          <div class="card">
+            <div>
+              <h3>Revenue</h3>
+              <h2>$45,670</h2>
+              <p class="green">+18% this month</p>
+            </div>
+            <i class="fa-solid fa-dollar-sign"></i>
+          </div>
+
+          <div class="card">
+            <div>
+              <h3>Orders</h3>
+              <h2>1,245</h2>
+              <p>235 Pending</p>
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+
+          <div class="card">
+            <div>
+              <h3>Customers</h3>
+              <h2>845</h2>
+              <p>102 New</p>
+            </div>
+            <i class="fa-solid fa-users"></i>
+          </div>
+
+          <div class="card">
+            <div>
+              <h3>Profit</h3>
+              <h2>$12,890</h2>
+              <p class="green">+9%</p>
+            </div>
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+        </section>
+
+        <section class="dashboard-content">          
+          <div class="analytics">
+            <div class="section-header">
+              <h2>Sales Analytics</h2>
+              <button>View Report</button>
+            </div>
+
+            <div class="chart">
+              <div class="bar bar1">
+                <span>45%</span>
+              </div>
+              <div class="bar bar2">
+                <span>60%</span>
+              </div>
+              <div class="bar bar3">
+                <span>82%</span>
+              </div>
+              <div class="bar bar4">
+                <span>55%</span>
+              </div>
+              <div class="bar bar5">
+                <span>95%</span>
+              </div>
+              <div class="bar bar6">
+                <span>70%</span>
+              </div>
+              <div class="bar bar7">
+                <span>88%</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="quick-stats">
+            <div class="mini-card">
+              <i class="fa-solid fa-user-plus"></i>
+              <h3>125</h3>
+              <p>New Users</p>
+            </div>
+            <div class="mini-card">
+              <i class="fa-solid fa-message"></i>
+              <h3>48</h3>
+              <p>Messages</p>
+            </div>
+
+            <div class="mini-card">
+              <i class="fa-solid fa-star"></i>
+              <h3>324</h3>
+              <p>Reviews</p>
+            </div>
+            <div class="mini-card">
+              <i class="fa-solid fa-truck"></i>
+              <h3>17</h3>
+              <p>Pending Orders</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="orders">
+          <div class="section-header">
+            <h2>Recent Orders</h2>
+            <button>See All</button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Status</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>John Smith</td>
+                <td>MacBook Pro</td>
+                <td><span class="status completed">Completed</span></td>
+                <td>$2,499</td>
+              </tr>
+
+              <tr>
+                <td>Emma Wilson</td>
+                <td>iPhone 16</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>$1,199</td>
+              </tr>
+
+              <tr>
+                <td>Michael Brown</td>
+                <td>Apple Watch</td>
+                <td><span class="status cancelled">Cancelled</span></td>
+                <td>$499</td>
+              </tr>
+
+              <tr>
+                <td>Sophia Lee</td>
+                <td>AirPods Pro</td>
+                <td><span class="status completed">Completed</span></td>
+                <td>$299</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <footer>
+          <p>© 2026 DashPro Dashboard • Built with HTML, CSS & JavaScript</p>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

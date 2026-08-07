@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <header>
+        <h1>
+          <i class="fa-solid fa-note-sticky"></i>
+          Notes App
+        </h1>
+        <p>
+          Save your ideas, organize your thoughts and never forget anything.
+        </p>
+      </header>
+      <section class="note-form">
+        <input type="text" id="title" placeholder="Enter note title" />
+        <textarea id="description" placeholder="Write your note here..."></textarea>
+        <button id="addNote">
+          <i class="fa-solid fa-plus"></i>
+          Add Note
+        </button>
+      </section>
+
+      <section class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search" placeholder="Search notes..." />
+      </section>
+      <section id="notesContainer" class="notes-grid">
+          </section>
+
+      <div id="emptyState" class="empty-state">
+        <i class="fa-solid fa-note-sticky"></i>
+        <h2>No Notes Yet</h2>
+        <p>Start by creating your first note.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

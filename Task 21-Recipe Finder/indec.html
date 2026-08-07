@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fa-solid fa-utensils"></i>
+                <h1>Recipe Finder</h1>
+            </div>
+            <button id="favoritesBtn" class="favorites-btn">
+                <i class="fa-solid fa-heart"></i>
+                Favorites
+                <span id="favoriteCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Find Your Next Favorite Recipe</h2>
+            <p>Discover delicious recipes and learn how to make them.</p>
+        </section>
+
+        <section class="search-section">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search for a recipe...">
+                <button id="searchBtn">Search</button>
+            </div>
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+        </section>
+
+        <div id="loading" class="loading hidden">
+            <i class="fa-solid fa-spinner"></i>
+            <p>Finding delicious recipes...</p>
+        </div>
+
+        <div id="message" class="message hidden">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p></p>
+        </div>
+
+        <section id="recipesContainer" class="recipes-grid"></section>
+
+        <div id="emptyState" class="empty-state hidden">
+            <i class="fa-solid fa-bowl-food"></i>
+            <h2>No Recipes Found</h2>
+            <p>Try searching for something else.</p>
+        </div>
+    </main>
+
+    <div id="recipeModal" class="modal hidden">
+        <div class="modal-content">
+            <button id="closeModal" class="close-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

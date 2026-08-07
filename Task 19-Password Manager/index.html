@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <header>
+        <h1>
+          <i class="fa-solid fa-shield-halved"></i>
+          Password Manager
+        </h1>
+        <p>Save and manage your passwords securely.</p>
+      </header>
+      <section class="password-form">
+        <input type="text" id="website" placeholder="Website Name" />
+        <input type="text" id="username" placeholder="Username or Email" />
+        <div class="password-box">
+          <input type="password" id="password" placeholder="Password" />
+          <button type="button" id="togglePassword" class="icon-btn">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+          <button type="button" id="generatePassword" class="icon-btn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </button>
+        </div>
+        <button id="savePassword">
+          <i class="fa-solid fa-floppy-disk"></i>
+          Save Password
+        </button>
+      </section>
+      <section class="toolbar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search" placeholder="Search Website..." />
+        </div>
+      </section>
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="passwordTable"></tbody>
+        </table>
+      </section>
+
+    
+      <div id="emptyState" class="empty-state">
+        <i class="fa-solid fa-lock"></i>
+        <h2>No Passwords Saved</h2>
+        <p>Add your first password to get started.</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

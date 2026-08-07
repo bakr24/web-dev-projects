@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopZone - E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" /> 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <i class="fa-solid fa-bag-shopping"></i>
+
+          <h1>ShopZone</h1>
+        </div>
+
+        <button id="cartBtn" class="cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          Cart
+
+          <span id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+    
+      <section class="hero">
+        <h2>Discover Amazing Products</h2>
+
+        <p>Find the products you love at the best prices.</p>
+      </section>
+
+   
+      <section class="controls">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+          />
+        </div>
+
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+        </select>
+
+        <select id="sortSelect">
+          <option value="default">Sort By</option>
+
+          <option value="price-low">Price: Low to High</option>
+
+          <option value="price-high">Price: High to Low</option>
+
+          <option value="name">Name: A-Z</option>
+        </select>
+      </section>
+
+     
+      <div id="loading" class="loading">
+        <i class="fa-solid fa-spinner"></i>
+
+        <p>Loading products...</p>
+      </div>
+
+      
+      <div id="message" class="message hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+
+        <p></p>
+      </div>
+
+      <section id="productsContainer" class="products-grid"></section>
+
+      <div id="emptyProducts" class="empty-state hidden">
+        <i class="fa-solid fa-box-open"></i>
+
+        <h2>No Products Found</h2>
+
+        <p>Try changing your search or category filter.</p>
+      </div>
+    </main>
+
+  
+    <div id="cartOverlay" class="cart-overlay hidden"></div>
+
+    <aside id="cartSidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <div>
+          <h2>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Your Cart
+          </h2>
+          <p id="cartItemsText">0 items</p>
+        </div>
+
+        <button id="closeCart" class="close-cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+     
+      <div id="cartItems" class="cart-items"></div>
+
+      <div id="emptyCart" class="empty-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <h3>Your cart is empty</h3>
+
+        <p>Add some products to get started.</p>
+      </div>
+
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Subtotal</span>
+
+          <strong id="cartTotal"> $0.00 </strong>
+        </div>
+
+        <button id="checkoutBtn" class="checkout-btn">
+          <i class="fa-solid fa-credit-card"></i>
+
+          Checkout
+        </button>
+      </div>
+    </aside>
+    
+
+    <div id="productModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeModal" class="modal-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="modalBody" class="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

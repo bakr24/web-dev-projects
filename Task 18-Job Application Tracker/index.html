@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Job Application Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <div class="container">
+      <!-- ==========================
+             HEADER
+        =========================== -->
+
+      <header>
+        <h1>
+          <i class="fa-solid fa-briefcase"></i>
+
+          Job Application Tracker
+        </h1>
+
+        <p>Track your internships and job applications in one place.</p>
+      </header>
+
+      <!-- ==========================
+             DASHBOARD
+        =========================== -->
+
+      <section class="stats">
+        <div class="stat-card">
+          <i class="fa-solid fa-folder-open"></i>
+
+          <h2 id="totalJobs">0</h2>
+
+          <p>Total Applications</p>
+        </div>
+
+        <div class="stat-card applied">
+          <i class="fa-solid fa-paper-plane"></i>
+
+          <h2 id="appliedJobs">0</h2>
+
+          <p>Applied</p>
+        </div>
+
+        <div class="stat-card interview">
+          <i class="fa-solid fa-user-check"></i>
+
+          <h2 id="interviewJobs">0</h2>
+
+          <p>Interview</p>
+        </div>
+
+        <div class="stat-card offer">
+          <i class="fa-solid fa-award"></i>
+
+          <h2 id="offerJobs">0</h2>
+
+          <p>Offer</p>
+        </div>
+
+        <div class="stat-card rejected">
+          <i class="fa-solid fa-circle-xmark"></i>
+
+          <h2 id="rejectedJobs">0</h2>
+
+          <p>Rejected</p>
+        </div>
+      </section>
+
+      <!-- ==========================
+             FORM
+        =========================== -->
+
+      <section class="job-form">
+        <input type="text" id="company" placeholder="Company Name" />
+
+        <input type="text" id="position" placeholder="Job Position" />
+
+        <div class="row">
+          <input type="text" id="location" placeholder="Location" />
+
+          <input type="number" id="salary" placeholder="Expected Salary" />
+        </div>
+
+        <div class="row">
+          <select id="status">
+            <option value="Applied">Applied</option>
+
+            <option value="Interview">Interview</option>
+
+            <option value="Offer">Offer</option>
+
+            <option value="Rejected">Rejected</option>
+          </select>
+
+          <input type="date" id="date" />
+        </div>
+
+        <button id="addJob">
+          <i class="fa-solid fa-plus"></i>
+
+          Add Application
+        </button>
+      </section>
+
+      <!-- ==========================
+             SEARCH + FILTER
+        =========================== -->
+
+      <section class="toolbar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            id="search"
+            placeholder="Search company or position..."
+          />
+        </div>
+
+        <select id="filterStatus">
+          <option value="All">All Status</option>
+
+          <option value="Applied">Applied</option>
+
+          <option value="Interview">Interview</option>
+
+          <option value="Offer">Offer</option>
+
+          <option value="Rejected">Rejected</option>
+        </select>
+      </section>
+
+      <!-- ==========================
+             TABLE
+        =========================== -->
+
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+
+              <th>Position</th>
+
+              <th>Location</th>
+
+              <th>Salary</th>
+
+              <th>Status</th>
+
+              <th>Date</th>
+
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="jobTableBody"></tbody>
+        </table>
+      </section>
+
+      <!-- ==========================
+             EMPTY STATE
+        =========================== -->
+
+      <div id="emptyState" class="empty-state">
+        <i class="fa-solid fa-briefcase"></i>
+
+        <h2>No Applications Yet</h2>
+
+        <p>Add your first job application to get started.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

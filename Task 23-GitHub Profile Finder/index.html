@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div>
+                    <h1>GitHub Profile Finder</h1>
+                    <p>Search and explore GitHub developers</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    id="usernameInput"
+                    placeholder="Enter GitHub username...">
+                <button id="searchBtn">
+                    Search
+                </button>
+            </div>
+        </section>
+
+        <div id="loading" class="loading hidden">
+            <i class="fa-solid fa-spinner"></i>
+            <p>Searching GitHub...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p></p>
+        </div>
+
+        <section id="profileSection" class="profile-section hidden">
+            <div class="profile-card">
+                <div class="profile-top">
+                    <img
+                        id="avatar"
+                        class="avatar"
+                        src=""
+                        alt="GitHub profile">
+
+                    <div class="profile-info">
+                        <h2 id="name">Name</h2>
+
+                        <a
+                            id="username"
+                            href="#"
+                            target="_blank">
+                            @username
+                        </a>
+
+                        <p id="bio">
+                            No bio available.
+                        </p>
+
+                        <a
+                            id="profileLink"
+                            class="github-link"
+                            href="#"
+                            target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            View GitHub Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <i class="fa-solid fa-users"></i>
+                        <div>
+                            <span>Followers</span>
+                            <strong id="followers">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <div>
+                            <span>Following</span>
+                            <strong id="following">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <div>
+                            <span>Repositories</span>
+                            <strong id="repositories">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <span>Gists</span>
+                            <strong id="gists">0</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <div class="detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="location">Not available</span>
+                    </div>
+
+                    <div class="detail">
+                        <i class="fa-solid fa-building"></i>
+                        <span id="company">Not available</span>
+                    </div>
+
+                    <div class="detail">
+                        <i class="fa-solid fa-link"></i>
+                        <a
+                            id="website"
+                            href="#"
+                            target="_blank">
+                            Not available
+                        </a>
+                    </div>
+
+                    <div class="detail">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <a
+                            id="twitter"
+                            href="#"
+                            target="_blank">
+                            Not available
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="repositories-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>Repositories</h2>
+                        <p id="repositoryCount">0 repositories</p>
+                    </div>
+                </div>
+
+                <div
+                    id="repositoriesContainer"
+                    class="repositories-grid">
+                </div>
+            </section>
+        </section>
+
+        <div id="emptyState" class="empty-state">
+            <i class="fa-brands fa-github"></i>
+            <h2>Find a GitHub Developer</h2>
+            <p>Enter a GitHub username to explore their profile.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

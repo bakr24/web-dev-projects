@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --background: #f5f7fb;
+    --white: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --weak: #ef4444;
+    --medium: #f59e0b;
+    --strong: #22c55e;
+    --shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(600px, 92%);
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.app {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 16px;
+    font-size: 30px;
+}
+
+.header h1 {
+    font-size: 27px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.password-display {
+    display: flex;
+    height: 55px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.password-display input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    background: transparent;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.password-display input::placeholder {
+    color: #94a3b8;
+}
+
+#copyBtn {
+    width: 55px;
+    border: none;
+    border-left: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#copyBtn:hover {
+    background: #eef2ff;
+    color: var(--primary);
+}
+
+.copy-message {
+    margin-top: 8px;
+    color: var(--strong);
+    font-size: 11px;
+    text-align: right;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.strength-section {
+    margin-top: 25px;
+}
+
+.strength-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.strength-header span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.strength-header strong {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.strength-bar {
+    width: 100%;
+    height: 7px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#strengthIndicator {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.options-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 17px;
+}
+
+.length-section {
+    margin-bottom: 25px;
+}
+
+.option-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.option-header label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#lengthValue {
+    min-width: 35px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #eef2ff;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#length {
+    width: 100%;
+    height: 5px;
+    appearance: none;
+    background: #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+}
+
+#length::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 3px solid white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#length::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 3px solid white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: #475569;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.checkbox-option:hover {
+    border-color: #a5b4fc;
+    background: #f8faff;
+}
+
+.checkbox-option input {
+    display: none;
+}
+
+.custom-checkbox {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    color: white;
+    font-size: 9px;
+    transition: 0.2s;
+}
+
+.checkbox-option input:checked + .custom-checkbox {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.checkbox-option input:checked + .custom-checkbox i {
+    display: block;
+}
+
+.checkbox-option input:not(:checked) + .custom-checkbox i {
+    display: none;
+}
+
+.generate-btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.generate-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+    .app {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .header-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .header p {
+        font-size: 11px;
+    }
+
+    .password-display {
+        height: 50px;
+    }
+
+    .password-display input {
+        font-size: 12px;
+    }
+
+    #copyBtn {
+        width: 50px;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .checkbox-option {
+        padding: 11px;
+    }
+
+    .generate-btn {
+        height: 47px;
+    }
+}
+
+@media (max-width: 400px) {
+    .app {
+        padding: 22px 16px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .header p {
+        font-size: 10px;
+    }
+
+    .password-display input {
+        font-size: 11px;
+        padding: 0 10px;
+    }
+
+    .strength-header span,
+    .strength-header strong {
+        font-size: 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 15px;
+    }
+}
+
